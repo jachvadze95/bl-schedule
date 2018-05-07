@@ -1,0 +1,25 @@
+{
+  "Days": [
+    "Sunday",
+    "Monday",
+    "Thuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday"
+  ],
+  "DaysMin": [
+    "Sun",
+    "Mon",
+    "The",
+    "Wed",
+    "Thu",
+    "Fri",
+    "Sat"
+  ],
+  "Translations": {
+    "WeekDay": "Week",
+    "MonthDay": "Month",
+    "StartTime": "Time"
+  }
+}

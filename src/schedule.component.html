@@ -1,0 +1,29 @@
+<div class="modal datepicker-modal open" tabindex="0" style="z-index: 1003; display: block; opacity: 1; top: 10%; transform: scaleX(1) scaleY(1);">
+  <div class="modal-content datepicker-container">
+    <div class="datepicker-calendar">
+      <fieldset class="wrapper wrapper-inline wrapper-days" [ngStyle]="{ 'border-color': options.color }">
+        <legend>{{LocalizationData.Translations.MonthDay}}</legend>
+        <div class="days">
+          <div class="day" *ngFor="let dayNum of numbers">
+            <div class="circle" [disabled]="disabled" [ngClass]="isDaySelected(dayNum)" (click)="selectDay($event, dayNum)">{{dayNum}}</div>
+          </div>
+        </div>
+      </fieldset>
+    </div>
+    <div class="datepicker-date-display">
+      <fieldset class="wrapper wrapper-inline wrapper-weekDays" [ngStyle]="{ 'border-color': options.color }">
+        <legend>{{LocalizationData.Translations.WeekDay}}</legend>
+        <div class="weekDays">
+          <div class="weekDay" [disabled]="disabled" [ngClass]="isWeekDaySelected(i)" (click)="selectWeekDay($event, i)" *ngFor="let weekDay of days; let i = index">{{weekDay}}</div>
+        </div>
+      </fieldset>
+    </div>
+    <div class="datepicker-data-start-time">
+      <fieldset [ngStyle]="{ 'border-color': options.color }">
+        <legend>{{LocalizationData.Translations.StartTime}}</legend>
+        <select (change)="modelOut()" [disabled]="disabled" [(ngModel)]="scheduleModel.startTime" required>
+          <option *ngFor="let timeOption of options.startTimeDataSource" [attr.checked]="isTimeChecked(timeOption)" [value]="timeOption">{{timeOption}}</option>
+        </select>
+      </fieldset>
+    </div>
+  </div>

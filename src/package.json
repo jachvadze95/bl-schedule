@@ -1,0 +1,29 @@
+{
+  "name": "bl-schedule",
+  "version": "0.4.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jachvadze95/ng-schedule.git"
+  },
+  "author": {
+    "name": "Dachi Jachvadze",
+    "email": "jachvadzedachi@gmail.com"
+  },
+  "keywords": [
+    "angular"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jachvadze95/ng-schedule.git/issues"
+  },
+  "main": "bl-schedule.umd.js",
+  "module": "bl-schedule.js",
+  "jsnext:main": "bl-schedule.js",
+  "typings": "bl-schedule.d.ts",
+  "peerDependencies": {
+    "@angular/core": "^4.0.0",
+    "@angular/forms": "^4.0.0",
+    "rxjs": "^5.1.0",
+    "zone.js": "^0.8.4"
+  }
+}
