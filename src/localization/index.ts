@@ -37,7 +37,7 @@ export class Localization {
       ],
       "DaysMin": [
         { id: 1, text: "Mon" },
-        { id: 2, text: "The" },
+        { id: 2, text: "Tue" },
         { id: 3, text: "Wed" },
         { id: 4, text: "Thu" },
         { id: 5, text: "Fri" },
