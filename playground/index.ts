@@ -6,7 +6,7 @@ import { NgModule } from '@angular/core';
 import { Component } from '@angular/core';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 
-// import { ScheduleModule }  from 'bl-schedule';
+ import { ScheduleModule }  from 'bl-schedule';
 
 @Component({
   selector: 'app',
@@ -17,7 +17,7 @@ class AppComponent {}
 @NgModule({
   bootstrap: [ AppComponent ],
   declarations: [ AppComponent ],
-  imports: [BrowserModule ]
+  imports: [BrowserModule, ScheduleModule ]
 })
 class AppModule {}
 

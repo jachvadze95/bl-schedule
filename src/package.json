@@ -1,6 +1,6 @@
 {
   "name": "bl-schedule",
-  "version": "0.4.0",
+  "version": "0.5.5",
   "repository": {
     "type": "git",
     "url": "https://github.com/jachvadze95/ng-schedule.git"
@@ -24,6 +24,7 @@
     "@angular/core": "^4.0.0",
     "@angular/forms": "^4.0.0",
     "rxjs": "^5.1.0",
+    "bl-dropdown-ng2": "^0.1.5",
     "zone.js": "^0.8.4"
   }
 }

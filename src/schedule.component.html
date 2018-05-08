@@ -3,9 +3,9 @@
     <div class="datepicker-calendar">
       <fieldset class="wrapper wrapper-inline wrapper-days" [ngStyle]="{ 'border-color': options.color }">
         <legend>{{LocalizationData.Translations.MonthDay}}</legend>
-        <div class="days">
+        <div class="days" [ngClass]="{'disabled': disabled}">
           <div class="day" *ngFor="let dayNum of numbers">
-            <div class="circle" [disabled]="disabled" [ngClass]="isDaySelected(dayNum)" (click)="selectDay($event, dayNum)">{{dayNum}}</div>
+            <div class="circle" [ngClass]="isDaySelected(dayNum)" (click)="selectDay($event, dayNum)">{{dayNum}}</div>
           </div>
         </div>
       </fieldset>
@@ -13,17 +13,16 @@
     <div class="datepicker-date-display">
       <fieldset class="wrapper wrapper-inline wrapper-weekDays" [ngStyle]="{ 'border-color': options.color }">
         <legend>{{LocalizationData.Translations.WeekDay}}</legend>
-        <div class="weekDays">
-          <div class="weekDay" [disabled]="disabled" [ngClass]="isWeekDaySelected(i)" (click)="selectWeekDay($event, i)" *ngFor="let weekDay of days; let i = index">{{weekDay}}</div>
+        <div class="weekDays" [ngClass]="{'disabled': disabled}">
+          <div class="weekDay" [ngClass]="isWeekDaySelected(weekDay.id)" (click)="selectWeekDay($event, weekDay.id)" *ngFor="let weekDay of days">{{weekDay.text}}</div>
         </div>
       </fieldset>
     </div>
     <div class="datepicker-data-start-time">
       <fieldset [ngStyle]="{ 'border-color': options.color }">
         <legend>{{LocalizationData.Translations.StartTime}}</legend>
-        <select (change)="modelOut()" [disabled]="disabled" [(ngModel)]="scheduleModel.startTime" required>
-          <option *ngFor="let timeOption of options.startTimeDataSource" [attr.checked]="isTimeChecked(timeOption)" [value]="timeOption">{{timeOption}}</option>
-        </select>
+        <bl-dropdown-ng2 [disabled]="disabled" name="time" required [(ngModel)]="scheduleModel.startTime" [dataSource]="options.startTimeDataSource"
+          (onSelect)="modelOut()"></bl-dropdown-ng2>
       </fieldset>
     </div>
   </div>
